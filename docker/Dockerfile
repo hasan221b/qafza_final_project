@@ -10,5 +10,5 @@ RUN pip install -r requierments.txt
 
 EXPOSE 8000
 
-CMD ['uvicorn', 'src.api.finbert_api2:app',"--host","0.0.0.0","-port","8000"]
-
+# Start the application using Gunicorn with Uvicorn workers
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8000", "src.api.finbert_api2:app"]
