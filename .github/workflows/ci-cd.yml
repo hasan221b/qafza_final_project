@@ -57,4 +57,4 @@ jobs:
         steps:
             - name: Trigger Render Deployment
               run: |
-                    curl -X POST "https://api.render.com/deploy/srv-xxxxxxxxxxxxxxxxxx?key=${{ secrets.RENDER_API_KEY }}"
+                    curl -X POST "https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
