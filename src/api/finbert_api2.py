@@ -77,3 +77,6 @@ class FinBertAPI:
             df = pd.read_csv('news.csv')
             sorted_df = df.sort_values(by='score', ascending=False)
             return sorted_df.to_dict(orient='records')
+
+# Create an instance of the class and expose it as `app`
+app = FinBertAPI().app
