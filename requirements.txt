@@ -5,6 +5,7 @@ transformers == 4.44.2
 pydantic == 2.8.2
 prometheus-fastapi-instrumentator == 7.0.2
 nltk == 3.9.1
-pandas == 2.0.3
+pandas==1.5.3
+numpy==1.23.5
 pytest == 8.3.2
 gunicorn
